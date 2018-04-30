@@ -1,4 +1,6 @@
-**NOTE!** This issue tracker is only used for keep track of issue. Remember tell all relevat details to original issue too.
+**NOTE!** This issue tracker is only used for keep track of issue.
+Remember tell all relevat details to original/upstream issue and reference this issue on there.
+Do **not** link to upstream issue as we don't want tell status of this one there.
 
 <!--- Provide a general summary of the issue in the Title above -->
 ## Description of issue
@@ -13,9 +15,6 @@
 <!--- Remove docker version which is not relevat -->
 - 17.09.1-ce
 - 17.06.2-ee-6
-
-## Upstream issue
-<!--- Links to upstream issue -->
 
 ### Known workaround(s)
 <!--- If you know any list them here -->
