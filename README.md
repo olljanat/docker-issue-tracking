@@ -13,4 +13,4 @@ Keeping track of status different components issues which we have seen with Linu
 # Known issues and workaround
 | Description                                                                 | Upstream item          | Workaround                                                                              |
 | --------------------------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------------------------- |
-| docker service logs command stopped working                                 | [moby/moby#35011]      | Restart all Swarm managers one by one                                                   |
+| docker service logs command stopped working                                 | [moby/moby#35011](moby/moby#35011)     | Restart all Swarm managers one by one                                                   |
