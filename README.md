@@ -25,3 +25,4 @@ Install GitHub Issue Link Status to your favorite browser so you can see status 
 | Windows | Cannot change default NAT IP on Windows node | [docker/for-win#726](https://github.com/docker/for-win/issues/726) | Update dockerd.exe start command to contain --fixed-cidr **before** start it first time on new server |
 | Windows | hcsshim::PrepareLayer timeouts on docker build phase | [moby/moby#27588](https://github.com/moby/moby/issues/27588) | Use Core version of Windows Server |
 | Windows | Cannot start container because directory mount fails | [moby/moby#30556](https://github.com/moby/moby/issues/30556) | Make sure that folder is empty on docker image / Use Windows Server build 1804 or above |
+| Both    | {{.Node.Hostname}} cannot be used on environment variables | [docker/swarmkit#](https://github.com/docker/swarmkit/issues/1951) | Update docker version to 17.10.0-ce or above |
