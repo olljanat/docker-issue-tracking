@@ -28,3 +28,6 @@ Install GitHub Issue Link Status to your favorite browser so you can see status 
 | Both    | {{.Node.Hostname}} cannot be used on environment variables | [docker/swarmkit#](https://github.com/docker/swarmkit/issues/1951) | Update docker version to 17.10.0-ce or above / None as you cannot go over 17.09.1-ce because of [moby/moby#35933](https://github.com/moby/moby/issues/35933) |
 | Windows | Networks stops working / containers fails to start | Multiple | Clear networks with [this](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking) script and join node back to Swarm |
 | Windows | Connections from Windows node to service(s) on Linux or another Windows node fails | [docker/for-win#1476](https://github.com/docker/for-win/issues/1476) | Use DNS routing mode ( *--endpoint-mode dnsrr* ) for all services (both Linux and Windows) where you want connect from Windows |
+| Windows | Cannot docker inside of docker (needed example with [microsoft/vsts-agent](https://hub.docker.com/r/microsoft/vsts-agent/)) | [moby/moby#34795](https://github.com/moby/moby/issues/34795) | - |
+
+
