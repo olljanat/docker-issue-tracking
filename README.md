@@ -2,6 +2,7 @@
 Keeping track of status different components issues which we have seen with Linux + Windows hybrid Docker Swarm.
 
 Note! I recommended to use [Semi-Annual Channel](https://docs.microsoft.com/en-us/windows-server/get-started/semi-annual-channel-overview) version of Windows Server as it contains many improvements which are missing from Windows Server 2016.
+I also recommended you to avoid Hyper-V isolation mode as it have very poor performance.
 
 ## Usage:
 Install GitHub Issue Link Status to your favorite browser so you can see status of these items directly on here:
@@ -15,6 +16,60 @@ Install GitHub Issue Link Status to your favorite browser so you can see status 
 | Swarm manager  | Rancher OS     | v1.2.0       | 17.09.1-ce                   |
 | Linux worker   | Rancher OS     | v1.2.0       | 17.09.1-ce                   |
 | Windows worker | Windows Server | version 1806 | 17.06.2-ee-11                |
+
+## Example of fully working stack
+
+This [docker stack](https://docs.docker.com/engine/reference/commandline/stack_deploy/) is tested to be fully working on Linux + Windows hybrid swarm and connections between all the containers are working just fine.
+**NOTE!** All the services are **endpoint_mode=dnsrr** that is trick to make connections working.
+```
+version: '3.3'
+
+networks:
+  test:
+    driver: overlay
+
+services:
+  win1:
+    image: microsoft/nanoserver:1803_KB4103721
+    networks:
+      - test
+    deploy:
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.platform.os==windows
+    command: ping -t 127.0.0.1
+  win2:
+    image: microsoft/nanoserver:1803_KB4103721
+    networks:
+      - test
+    deploy:
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.platform.os==windows
+    command: ping -t 127.0.0.1
+  linux1:
+    image: alpine:3.7
+    networks:
+      - test
+    deploy:
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.platform.os==linux
+    command: sh -c "ping 127.0.0.1"
+  linux2:
+    image: alpine:3.7
+    networks:
+      - test
+    deploy:
+      endpoint_mode: dnsrr
+      placement:
+        constraints:
+          - node.platform.os==linux
+    command: sh -c "ping 127.0.0.1"
+```
 
 
 # Known issues and workarounds
