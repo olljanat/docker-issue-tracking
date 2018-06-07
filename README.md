@@ -2,6 +2,7 @@
 Keeping track of status different components issues which we have seen with Linux + Windows hybrid Docker Swarm.
 
 Note! I recommended to use [Semi-Annual Channel](https://docs.microsoft.com/en-us/windows-server/get-started/semi-annual-channel-overview) version of Windows Server as it contains many improvements which are missing from Windows Server 2016.
+
 I also recommended you to avoid Hyper-V isolation mode as it have very poor performance.
 
 ## Usage:
@@ -20,6 +21,7 @@ Install GitHub Issue Link Status to your favorite browser so you can see status 
 ## Example of fully working stack
 
 This [docker stack](https://docs.docker.com/engine/reference/commandline/stack_deploy/) is tested to be fully working on Linux + Windows hybrid swarm and connections between all the containers are working just fine.
+
 **NOTE!** All the services are **endpoint_mode=dnsrr** that is trick to make connections working.
 ```
 version: '3.3'
