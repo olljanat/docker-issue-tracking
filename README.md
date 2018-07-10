@@ -85,7 +85,7 @@ services:
 | Windows | Networks stops working / containers fails to start | Multiple | Clear networks with [this](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking) script and join node back to Swarm |
 | Windows | Connections from Windows node to service(s) on Linux or another Windows node fails | [docker/for-win#1476](https://github.com/docker/for-win/issues/1476) | Use DNS routing mode ( *--endpoint-mode dnsrr* ) for all services (both Linux and Windows) where you want connect from Windows |
 | Windows | Cannot connect to docker from inside of container (needed example with [microsoft/vsts-agent](https://hub.docker.com/r/microsoft/vsts-agent/)) | [moby/moby#34795](https://github.com/moby/moby/issues/34795) | - |
-| Windows | Date / time is wrong inside of container with Hyper-V isolation mode | feedback hub ... | Use process isolation mode |
+| Windows | Date / time is wrong inside of container with Hyper-V isolation mode | [moby/moby#37283](https://github.com/moby/moby/issues/37283) | Use process isolation mode |
 | Windows | Printer spooler crashes inside of container | [stackoverflow](https://stackoverflow.com/questions/41565459/windows-2016-docker-container-error/) | https://stackoverflow.com/a/50748146/9529640 |
 | Windows | Cannot install all features to container because of they are [removed from image](https://docs.microsoft.com/en-us/windows-server/administration/server-core/server-core-container-removed-roles) | - | Copy needed packages from host machine C:\Windows\WinSxs and install using dism | 
 | Windows | net use command fails inside of container | - | Install File-Services feature to host *and* to container |
