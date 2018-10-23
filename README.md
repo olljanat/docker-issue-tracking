@@ -75,15 +75,13 @@ services:
 | OS      | Description                                                                 | Upstream item          | Workaround / solution                                                                   |
 | ------- | --------------------------------------------------------------------------- | ---------------------- | --------------------------------------------------------------------------------------- |
 | Linux   | docker service logs command stopped working | [moby/moby#35011](https://github.com/moby/moby/issues/35011) | Restart all Swarm managers one by one |
-| Windows | Cannot change default NAT IP on Windows node | [docker/for-win#726](https://github.com/docker/for-win/issues/726) | Update dockerd.exe start command to contain --fixed-cidr **before** start it first time on new server |
 | Windows | hcsshim::PrepareLayer timeouts on docker build phase | [moby/moby#27588](https://github.com/moby/moby/issues/27588) | Use Core version of Windows Server |
-| Windows | Cannot start container because directory mount fails | [moby/moby#30556](https://github.com/moby/moby/issues/30556) | Make sure that folder is empty on docker image / Use Windows Server build 1803 or above |
 | Windows | Networks stops working / containers fails to start | Multiple | Clear networks with [this](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking) script and join node back to Swarm |
 | Windows | Date / time is wrong inside of container with Hyper-V isolation mode | [moby/moby#37283](https://github.com/moby/moby/issues/37283) | Use process isolation mode |
 | Windows | Printer spooler crashes inside of container | [stackoverflow](https://stackoverflow.com/questions/41565459/windows-2016-docker-container-error/) | https://stackoverflow.com/a/50748146/9529640 |
 | Windows | Cannot install all features to container because of they are [removed from image](https://docs.microsoft.com/en-us/windows-server/administration/server-core/server-core-container-removed-roles) | - | Copy needed packages from host machine C:\Windows\WinSxs and install using dism | 
 | Windows | net use command fails inside of container | - | Install File-Services feature to host *and* to container |
-| Both    | Two or more containers on the same overlay network can't communicate with each other | [How to recover from a split gossip cluster](https://success.docker.com/article/how-to-recover-from-split-gossip-cluster) or use at least version 18.06 | 
+| Both    | Two or more containers on the same overlay network can't communicate with each other | [docker/libnetwork#213](https://github.com/docker/libnetwork/pull/2134) | [How to recover from a split gossip cluster](https://success.docker.com/article/how-to-recover-from-split-gossip-cluster) or use at least version 18.06 | 
 
 
 # Waiting for release
@@ -99,4 +97,6 @@ services:
 | Both    | Cannot stop containers | [moby/moby#35933](https://github.com/moby/moby/issues/35933) |
 | Windows | Container cannot be started because old endpoint is stuck | [moby/moby#36603](https://github.com/moby/moby/pull/36603) |
 | Both    | {{.Node.Hostname}} cannot be used on environment variables | [docker/swarmkit#](https://github.com/docker/swarmkit/issues/1951) | 
+| Windows | Cannot change default NAT IP on Windows node | [docker/for-win#726](https://github.com/docker/for-win/issues/726) |
+| Windows | Cannot start container because directory mount fails | [moby/moby#30556](https://github.com/moby/moby/issues/30556) |
 | Windows | Connections from Windows node to service(s) on Linux or another Windows node fails | [docker/for-win#1476](https://github.com/docker/for-win/issues/1476) |
