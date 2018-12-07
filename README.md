@@ -82,6 +82,7 @@ services:
 | Windows | Cannot install all features to container because of they are [removed from image](https://docs.microsoft.com/en-us/windows-server/administration/server-core/server-core-container-removed-roles) | - | Copy needed packages from host machine C:\Windows\WinSxs and install using dism | 
 | Windows | net use command fails inside of container | - | Install File-Services feature to host *and* to container |
 | Both    | Two or more containers on the same overlay network can't communicate with each other | [docker/libnetwork#213](https://github.com/docker/libnetwork/pull/2134) | [How to recover from a split gossip cluster](https://success.docker.com/article/how-to-recover-from-split-gossip-cluster) or use at least version 18.06 | 
+| Windows | Docker images are not removed from disk | [docker/for-win#745](https://github.com/docker/for-win/issues/745) | Follow cleanup guide on [docker/for-win#745 (comment)](https://github.com/docker/for-win/issues/745#issuecomment-445243539)  |
 
 
 # Waiting for release
