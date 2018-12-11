@@ -83,7 +83,7 @@ services:
 | Windows | net use command fails inside of container | - | Install File-Services feature to host *and* to container |
 | Both    | Two or more containers on the same overlay network can't communicate with each other | [docker/libnetwork#213](https://github.com/docker/libnetwork/pull/2134) | [How to recover from a split gossip cluster](https://success.docker.com/article/how-to-recover-from-split-gossip-cluster) or use at least version 18.06 | 
 | Windows | Docker images are not removed from disk | [docker/for-win#745](https://github.com/docker/for-win/issues/745) | Follow cleanup guide on [docker/for-win#745 (comment)](https://github.com/docker/for-win/issues/745#issuecomment-445243539)  |
-
+| Windows | UDP/TCP sockets are not scaling inside Windows container  | [moby/moby#34355](https://github.com/moby/moby/issues/34355) | Use Windows Server 2019 |
 
 # Waiting for release
 | OS      | Description                                                                 | Upstream item          | Target version |
