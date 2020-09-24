@@ -97,7 +97,6 @@ services:
       placement:
         constraints:
           - node.platform.os==windows
-          - node.labels.node==win1
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.win1.rule=PathPrefix(`/win1`)"
@@ -128,7 +127,6 @@ services:
       placement:
         constraints:
           - node.platform.os==windows
-          - node.labels.node==win2
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.win2.rule=PathPrefix(`/win2`)"
