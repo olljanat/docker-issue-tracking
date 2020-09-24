@@ -69,7 +69,7 @@ networks:
     internal: true
 ```
 
-After you deploy Traefik you can find its dashboard from http://<manager node IP>:8080/dashboard/
+After you deploy Traefik you can find its dashboard from `http://<manager node IP>:8080/dashboard/`
 
 
 ## Whoami
@@ -162,8 +162,8 @@ networks:
 ```
 
 After you are deployed this stack you can connect to each of your service using these URLs:
-* http://<manager node IP>/win1/
-* http://<manager node IP>/linux1/
-* http://<manager node IP>/win2/
-* http://<manager node IP>/linux2/
+* `http://<manager node IP>/win1/`
+* `http://<manager node IP>/linux1/`
+* `http://<manager node IP>/win2/`
+* `http://<manager node IP>/linux2/`
 
