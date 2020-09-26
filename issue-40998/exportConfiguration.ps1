@@ -1,0 +1,87 @@
+# This script will export overlay network configuration from both Windows Host Networking Service (HNS)
+# and Docker and generalize network, etc IDs from those which simplify comparization
+#
+# Note! Currently this script excepts that you have you have created only one service
+# and that it uses only one overlay network
+
+$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
+
+## Docker
+$DockerNetworks = docker network inspect $(docker network ls --filter driver=overlay -q) | ConvertFrom-Json
+if ($DockerNetworks.count -ne 2) {
+    throw "Incorrect number of Docker overlay networks found"
+}
+forEach($n in $DockerNetworks) {
+    $n.Created = '2020-01-01T00:00:00.0000000+03:00'
+    $containerPropertyNames = ($n.Containers | Get-Member -MemberType NoteProperty).Name
+    if ($containerPropertyNames.count -ne 2) {
+        throw "Incorrect number of container properties found"
+    }
+    $containerID = $containerPropertyNames | Where-Object {$_ -notlike "*-*"}
+    $lbName = $containerPropertyNames | Where-Object {$_ -ne $containerID}
+    $n.Containers | Add-Member -Type NoteProperty -Name "0000000000000000000000000000000000000000000000000000000000000000" -Value $n.Containers.$containerID
+    $n.Containers.PSObject.Properties.Remove($containerID)
+    if ($n.Name -eq "ingress") {
+        $global:IngressId = $n.Id
+        $global:IngressName = $n.Name
+
+        $global:IngressHnsID = $n.Options[0].'com.docker.network.windowsshim.hnsid'
+        $n.Options[0].'com.docker.network.windowsshim.hnsid' = '00000000-0000-0000-0000-000000000000'
+
+        $global:IngressEndpointID = $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.EndpointID
+        $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.EndpointID = '1111111111111111111111111111111111111111111111111111111111111111'
+        $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.MacAddress = '00:00:00:00:00:00'
+
+        $global:IngressLbEndpointID = $n.Containers.$lbName.EndpointID
+        $n.Containers.$lbName.EndpointID = '2222222222222222222222222222222222222222222222222222222222222222'
+        $n.Containers.$lbName.MacAddress = '11:11:11:11:11:11'
+    } else {
+        $global:AppNetId = $n.Id
+        $global:AppNetName = $n.Name
+
+        $global:AppNetHnsID = $n.Options[0].'com.docker.network.windowsshim.hnsid'
+        $n.Options[0].'com.docker.network.windowsshim.hnsid' = '10000000-0000-0000-0000-000000000000'
+
+        $global:AppEndpointID = $n.Containers.$containerID.EndpointID
+        $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.Name = 'app'
+        $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.EndpointID = '3333333333333333333333333333333333333333333333333333333333333333'
+        $n.Containers.'0000000000000000000000000000000000000000000000000000000000000000'.MacAddress = '22:22:22:22:22:22'
+
+        $global:AppLbEndpointID = $n.Containers.$lbName.EndpointID
+        $n.Containers.$lbName.EndpointID = '4444444444444444444444444444444444444444444444444444444444444444'
+        $n.Containers.$lbName.MacAddress = '33:33:33:33:33:33'
+    }
+    $n.Id = $n.Name
+}
+$DockerNetworksJSON = $DockerNetworks | ConvertTo-Json -Depth 100
+[System.IO.File]::WriteAllLines("$PSScriptRoot\DockerNetworks.json", $DockerNetworksJSON, $Utf8NoBomEncoding)
+
+## HNS
+Import-Module HostNetworkingService
+
+# Networks
+$HnsNetworks = Get-HnsNetwork | Where-Object {$_.Name -ne "nat"}
+if ($HnsNetworks.count -ne 2) {
+    throw "Incorrect number of HNS overlay networks found"
+}
+
+$HnsIngress = $HnsNetworks | Where-Object {$_.Name -eq $IngressId}
+$HnsIngress.ActivityId = '00000000-0000-0000-0000-000000000001'
+$HnsIngress.ID = '00000000-0000-0000-0000-000000000000'
+$HnsIngress.Name = $IngressName
+
+$HnsAppNet = $HnsNetworks | Where-Object {$_.Name -eq $AppNetId}
+$HnsAppNet.ActivityId = '00000000-0000-0000-0000-000000000002'
+$HnsAppNet.ID = '10000000-0000-0000-0000-000000000000'
+$HnsAppNet.Name = $AppNetName
+
+$HnsNetworksJSON = $HnsNetworks | ConvertTo-Json -Depth 100
+[System.IO.File]::WriteAllLines("$PSScriptRoot\HnsNetworks.json", $HnsNetworksJSON, $Utf8NoBomEncoding)
+
+# Endpoints
+$HnsEndpointsJSON = Get-HnsEndpoint | Where-Object {$_.Type -eq "overlay"} | ConvertTo-Json -Depth 100
+[System.IO.File]::WriteAllLines("$PSScriptRoot\HnsEndpoints.json", $HnsEndpointsJSON, $Utf8NoBomEncoding)
+
+# Policies / Load Balancers
+$HnsPoliciesJSON = Get-HnsPolicyList | ConvertTo-Json -Depth 100
+[System.IO.File]::WriteAllLines("$PSScriptRoot\HnsPolicies.json", $HnsPoliciesJSON, $Utf8NoBomEncoding)
