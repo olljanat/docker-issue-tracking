@@ -1,0 +1,444 @@
+[
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000001",
+        "AdditionalParams":  {
+
+                             },
+        "CreateProcessingStartTime":  132456078214552553,
+        "DNSServerList":  "10.0.1.1,192.168.100.1",
+        "EnableInternalDNS":  true,
+        "EncapOverhead":  50,
+        "GatewayAddress":  "10.0.0.1",
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132456078214451917
+                   },
+        "ID":  "B6171229-327F-4D00-B3CE-24AB78BD7BA5",
+        "IPAddress":  "10.0.0.4",
+        "MacAddress":  "00-15-5D-FC-A8-61",
+        "Name":  "281de8858aba4cfb2629d484c1026e8a103bf80d7d395be7e4baad15a3c3fd4f",
+        "Policies":  [
+                         {
+                             "PA":  "192.168.100.100",
+                             "Type":  "PA"
+                         },
+                         {
+                             "PA":  "",
+                             "Type":  "OutBoundNAT"
+                         }
+                     ],
+        "PrefixLength":  24,
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  5,
+                          "Allocators":  [
+                                             {
+                                                 "AdapterNetCfgInstanceId":  "{277F24DD-6877-4530-94C3-EB948B5BF07A}",
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  0,
+                                                 "CompartmendId":  7,
+                                                 "Connected":  true,
+                                                 "DevicelessNic":  true,
+                                                 "EndpointNicGuid":  "576BBA6D-5CAA-4DCE-ACAC-FFB5C9EA9278",
+                                                 "EndpointPortGuid":  "34F6D165-E465-4598-A24C-4321030383DF",
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078218038424
+                                                            },
+                                                 "Hidden":  false,
+                                                 "ID":  "D942FCED-8902-4BFE-A183-535DA108B42B",
+                                                 "InterfaceGuid":  "277F24DD-6877-4530-94C3-EB948B5BF07A",
+                                                 "IsPolicy":  false,
+                                                 "IsolationId":  4096,
+                                                 "MTU":  1450,
+                                                 "MacAddress":  "00-15-5D-FC-A8-61",
+                                                 "ManagementPort":  false,
+                                                 "NicFriendlyName":  "281de8858aba4cfb2629d484c1026e8a103bf80d7d395be7e4baad15a3c3fd4f",
+                                                 "PreferredPortFriendlyName":  "B6171229-327F-4D00-B3CE-24AB78BD7BA5",
+                                                 "State":  3,
+                                                 "SwitchId":  "C28E0ACA-9DFF-4843-BAE7-7A13339CBB0E",
+                                                 "Tag":  "Endpoint Port",
+                                                 "WaitForIpv6Interface":  false,
+                                                 "nonPersistentPort":  false
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  1,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078219974809
+                                                            },
+                                                 "ID":  "86180A84-33E7-474B-98F9-8DEDB780665F",
+                                                 "InDefaultIsolation":  false,
+                                                 "IsPolicy":  true,
+                                                 "IsolationID":  4096,
+                                                 "State":  3,
+                                                 "Tag":  "Isolation Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  2,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078219974809
+                                                            },
+                                                 "ID":  "F4E78E73-1576-42C1-ABEA-969C0BEB1D0E",
+                                                 "IsPolicy":  true,
+                                                 "Rules":  [
+                                                               {
+                                                                   "Action":  "Allow",
+                                                                   "Direction":  "In",
+                                                                   "Priority":  65500,
+                                                                   "Type":  "ACL"
+                                                               },
+                                                               {
+                                                                   "Action":  "Allow",
+                                                                   "Direction":  "Out",
+                                                                   "Priority":  65500,
+                                                                   "Type":  "ACL"
+                                                               }
+                                                           ],
+                                                 "State":  3,
+                                                 "Tag":  "ACL Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  3,
+                                                 "CA":  "10.0.0.4",
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078221290414
+                                                            },
+                                                 "ID":  "70F57641-CD79-4A47-9F8C-FA44284962A9",
+                                                 "IsLocal":  true,
+                                                 "IsPolicy":  true,
+                                                 "PA":  "192.168.100.100",
+                                                 "State":  3,
+                                                 "Tag":  "VNET Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  4,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078221290414
+                                                            },
+                                                 "ID":  "C0733E31-F7A7-4713-977F-B1C73A303E2A",
+                                                 "IsPolicy":  true,
+                                                 "LocalRoutedVip":  false,
+                                                 "State":  3,
+                                                 "Tag":  "VFP OutBound NAT Policy",
+                                                 "TcpNatPool":  "SLB_NATPOOL_IPV4_TCP_10.0.0.4192.168.100.100C0733E31-F7A7-4713-977F-B1C73A303E2A0",
+                                                 "UdpNatPool":  "SLB_NATPOOL_IPV4_UDP_10.0.0.4192.168.100.100C0733E31-F7A7-4713-977F-B1C73A303E2A0",
+                                                 "VIP":  ""
+                                             }
+                                         ],
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132456078214451917
+                                     },
+                          "ID":  "5D633F12-1431-40E9-98F6-82440FE15D77",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "EB7AF77A-245B-48A0-BC19-A4A6840AA95E"
+                      },
+        "SharedContainers":  [
+                                 "0000000000000000000000000000000000000000000000000000000000000000"
+                             ],
+        "StartTime":  132456078219974809,
+        "State":  2,
+        "Type":  "overlay",
+        "Version":  38654705667,
+        "VirtualNetwork":  "61FFAE76-CD7D-4EC6-B1F3-FE53559BAB72",
+        "VirtualNetworkName":  "ingress"
+    },
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000001",
+        "AdditionalParams":  {
+
+                             },
+        "CreateProcessingStartTime":  132456078163684517,
+        "DNSServerList":  "10.0.1.1,192.168.100.1",
+        "EnableInternalDNS":  true,
+        "EncapOverhead":  50,
+        "GatewayAddress":  "10.0.0.1",
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132456078163644422
+                   },
+        "ID":  "9432F69C-0EFF-4072-ABB7-9036B715FE1F",
+        "IPAddress":  "10.0.0.2",
+        "MacAddress":  "00-15-5D-FC-A0-4B",
+        "Name":  "6f3b962e58b0f8dc2541aec70f9e4845bf33d0c222b91c23655893adce19485d",
+        "Policies":  [
+                         {
+                             "PA":  "192.168.100.100",
+                             "Type":  "PA"
+                         },
+                         {
+                             "PA":  "",
+                             "Type":  "OutBoundNAT"
+                         }
+                     ],
+        "PrefixLength":  24,
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  0,
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132456078163644422
+                                     },
+                          "ID":  "9B7FC187-B13B-407E-A3AD-0E5A34CEBD50",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "EB7AF77A-245B-48A0-BC19-A4A6840AA95E"
+                      },
+        "SharedContainers":  [
+
+                             ],
+        "State":  1,
+        "Type":  "overlay",
+        "Version":  38654705667,
+        "VirtualNetwork":  "61FFAE76-CD7D-4EC6-B1F3-FE53559BAB72",
+        "VirtualNetworkName":  "ingress"
+    },
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000002",
+        "AdditionalParams":  {
+
+                             },
+        "CreateProcessingStartTime":  132456078214946544,
+        "DNSServerList":  "10.0.1.1,10.152.177.11,10.152.177.12",
+        "EnableInternalDNS":  true,
+        "EncapOverhead":  50,
+        "GatewayAddress":  "10.0.1.1",
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132456078214907441
+                   },
+        "ID":  "52931E20-11E2-408B-95A3-1E8564C397A6",
+        "IPAddress":  "10.0.1.3",
+        "MacAddress":  "00-15-5D-49-95-F6",
+        "Name":  "4c58d9f0e30f1786668fa36b140ea63f796511fa98ee7ea589ba1cc2ca982edb",
+        "Policies":  [
+                         {
+                             "PA":  "192.168.100.100",
+                             "Type":  "PA"
+                         },
+                         {
+                             "PA":  "",
+                             "Type":  "OutBoundNAT"
+                         }
+                     ],
+        "PrefixLength":  24,
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  5,
+                          "Allocators":  [
+                                             {
+                                                 "AdapterNetCfgInstanceId":  "{D623BE81-020B-4CB6-BF79-69E816361F5D}",
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  0,
+                                                 "CompartmendId":  7,
+                                                 "Connected":  true,
+                                                 "DevicelessNic":  true,
+                                                 "EndpointNicGuid":  "A57A9175-D4FE-47A2-87FE-45A3A2D9EDBB",
+                                                 "EndpointPortGuid":  "480C7438-1B34-46BB-9BCE-22AD329AF60B",
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078221290414
+                                                            },
+                                                 "Hidden":  false,
+                                                 "ID":  "46CC3B71-EB38-4DC1-9AEB-77DBDA983631",
+                                                 "InterfaceGuid":  "D623BE81-020B-4CB6-BF79-69E816361F5D",
+                                                 "IsPolicy":  false,
+                                                 "IsolationId":  4097,
+                                                 "MTU":  1450,
+                                                 "MacAddress":  "00-15-5D-49-95-F6",
+                                                 "ManagementPort":  false,
+                                                 "NicFriendlyName":  "4c58d9f0e30f1786668fa36b140ea63f796511fa98ee7ea589ba1cc2ca982edb",
+                                                 "PreferredPortFriendlyName":  "52931E20-11E2-408B-95A3-1E8564C397A6",
+                                                 "State":  3,
+                                                 "SwitchId":  "C28E0ACA-9DFF-4843-BAE7-7A13339CBB0E",
+                                                 "Tag":  "Endpoint Port",
+                                                 "WaitForIpv6Interface":  false,
+                                                 "nonPersistentPort":  false
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  1,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078222589292
+                                                            },
+                                                 "ID":  "2F6E42ED-9B77-48F6-9348-4FABA0C07B42",
+                                                 "InDefaultIsolation":  false,
+                                                 "IsPolicy":  true,
+                                                 "IsolationID":  4097,
+                                                 "State":  3,
+                                                 "Tag":  "Isolation Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  2,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078222609238
+                                                            },
+                                                 "ID":  "DB6BF660-C972-460E-835A-07E2EB38F257",
+                                                 "IsPolicy":  true,
+                                                 "Rules":  [
+                                                               {
+                                                                   "Action":  "Allow",
+                                                                   "Direction":  "In",
+                                                                   "Priority":  65500,
+                                                                   "Type":  "ACL"
+                                                               },
+                                                               {
+                                                                   "Action":  "Allow",
+                                                                   "Direction":  "Out",
+                                                                   "Priority":  65500,
+                                                                   "Type":  "ACL"
+                                                               }
+                                                           ],
+                                                 "State":  3,
+                                                 "Tag":  "ACL Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  3,
+                                                 "CA":  "10.0.1.3",
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078230438826
+                                                            },
+                                                 "ID":  "E9F3D931-1894-428F-B7AA-DD2B99650EB4",
+                                                 "IsLocal":  true,
+                                                 "IsPolicy":  true,
+                                                 "PA":  "192.168.100.100",
+                                                 "State":  3,
+                                                 "Tag":  "VNET Policy"
+                                             },
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  4,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132456078230438826
+                                                            },
+                                                 "ID":  "DDCB284D-BD87-4C4F-92C4-7BA4AE714900",
+                                                 "IsPolicy":  true,
+                                                 "LocalRoutedVip":  false,
+                                                 "State":  3,
+                                                 "Tag":  "VFP OutBound NAT Policy",
+                                                 "TcpNatPool":  "SLB_NATPOOL_IPV4_TCP_10.0.1.3192.168.100.100DDCB284D-BD87-4C4F-92C4-7BA4AE7149000",
+                                                 "UdpNatPool":  "SLB_NATPOOL_IPV4_UDP_10.0.1.3192.168.100.100DDCB284D-BD87-4C4F-92C4-7BA4AE7149000",
+                                                 "VIP":  ""
+                                             }
+                                         ],
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132456078214907441
+                                     },
+                          "ID":  "1748C2D6-6552-465E-B04C-D39FCDD00585",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "D415A2CB-9D51-4702-A21A-CC0569856F9D"
+                      },
+        "SharedContainers":  [
+                                 "0000000000000000000000000000000000000000000000000000000000000000"
+                             ],
+        "StartTime":  132456078222589292,
+        "State":  2,
+        "Type":  "overlay",
+        "Version":  38654705667,
+        "VirtualNetwork":  "0398945F-3854-47C1-88CB-BC4FF84F6396",
+        "VirtualNetworkName":  "juliett"
+    },
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000002",
+        "AdditionalParams":  {
+
+                             },
+        "CreateProcessingStartTime":  132456078166065706,
+        "DNSServerList":  "10.0.1.1,10.152.177.11,10.152.177.12",
+        "EnableInternalDNS":  true,
+        "EncapOverhead":  50,
+        "GatewayAddress":  "10.0.1.1",
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132456078166025679
+                   },
+        "ID":  "82236533-F88D-41E8-B9DB-BD76F445AB8F",
+        "IPAddress":  "10.0.1.4",
+        "MacAddress":  "00-15-5D-49-90-13",
+        "Name":  "ca25abd7e60cd63b637e5d25df37dc4fd2762ac0f418fc83f18f274ced0726a0",
+        "Policies":  [
+                         {
+                             "PA":  "192.168.100.100",
+                             "Type":  "PA"
+                         },
+                         {
+                             "PA":  "",
+                             "Type":  "OutBoundNAT"
+                         }
+                     ],
+        "PrefixLength":  24,
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  0,
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132456078166025679
+                                     },
+                          "ID":  "3334C397-C21F-4002-A33A-90794A062841",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "D415A2CB-9D51-4702-A21A-CC0569856F9D"
+                      },
+        "SharedContainers":  [
+
+                             ],
+        "State":  1,
+        "Type":  "overlay",
+        "Version":  38654705667,
+        "VirtualNetwork":  "0398945F-3854-47C1-88CB-BC4FF84F6396",
+        "VirtualNetworkName":  "juliett"
+    }
+]

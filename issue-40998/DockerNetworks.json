@@ -1,0 +1,110 @@
+[
+    {
+        "Name":  "ingress",
+        "Id":  "ingress",
+        "Created":  "2020-01-01T00:00:00.0000000+03:00",
+        "Scope":  "swarm",
+        "Driver":  "overlay",
+        "EnableIPv6":  false,
+        "IPAM":  {
+                     "Driver":  "default",
+                     "Options":  null,
+                     "Config":  [
+                                    {
+                                        "Subnet":  "10.0.0.0/24",
+                                        "Gateway":  "10.0.0.1"
+                                    }
+                                ]
+                 },
+        "Internal":  false,
+        "Attachable":  false,
+        "Ingress":  true,
+        "ConfigFrom":  {
+                           "Network":  ""
+                       },
+        "ConfigOnly":  false,
+        "Containers":  {
+                           "ingress-sbox":  {
+                                                "Name":  "ingress-endpoint",
+                                                "EndpointID":  "2222222222222222222222222222222222222222222222222222222222222222",
+                                                "MacAddress":  "11:11:11:11:11:11",
+                                                "IPv4Address":  "10.0.0.2/24",
+                                                "IPv6Address":  ""
+                                            },
+                           "0000000000000000000000000000000000000000000000000000000000000000":  {
+                                                                                                    "Name":  "iis.1.1l3652wmxai29m4kpx9bw9kva",
+                                                                                                    "EndpointID":  "1111111111111111111111111111111111111111111111111111111111111111",
+                                                                                                    "MacAddress":  "00:00:00:00:00:00",
+                                                                                                    "IPv4Address":  "10.0.0.4/24",
+                                                                                                    "IPv6Address":  ""
+                                                                                                }
+                       },
+        "Options":  {
+                        "com.docker.network.driver.overlay.vxlanid_list":  "4096",
+                        "com.docker.network.windowsshim.hnsid":  "00000000-0000-0000-0000-000000000000"
+                    },
+        "Labels":  {
+
+                   },
+        "Peers":  [
+                      {
+                          "Name":  "a2ebf129bf6a",
+                          "IP":  "192.168.100.100"
+                      }
+                  ]
+    },
+    {
+        "Name":  "juliett",
+        "Id":  "juliett",
+        "Created":  "2020-01-01T00:00:00.0000000+03:00",
+        "Scope":  "swarm",
+        "Driver":  "overlay",
+        "EnableIPv6":  false,
+        "IPAM":  {
+                     "Driver":  "default",
+                     "Options":  null,
+                     "Config":  [
+                                    {
+                                        "Subnet":  "10.0.1.0/24",
+                                        "Gateway":  "10.0.1.1"
+                                    }
+                                ]
+                 },
+        "Internal":  false,
+        "Attachable":  false,
+        "Ingress":  false,
+        "ConfigFrom":  {
+                           "Network":  ""
+                       },
+        "ConfigOnly":  false,
+        "Containers":  {
+                           "lb-juliett":  {
+                                              "Name":  "juliett-endpoint",
+                                              "EndpointID":  "4444444444444444444444444444444444444444444444444444444444444444",
+                                              "MacAddress":  "33:33:33:33:33:33",
+                                              "IPv4Address":  "10.0.1.4/24",
+                                              "IPv6Address":  ""
+                                          },
+                           "0000000000000000000000000000000000000000000000000000000000000000":  {
+                                                                                                    "Name":  "app",
+                                                                                                    "EndpointID":  "3333333333333333333333333333333333333333333333333333333333333333",
+                                                                                                    "MacAddress":  "22:22:22:22:22:22",
+                                                                                                    "IPv4Address":  "10.0.1.3/24",
+                                                                                                    "IPv6Address":  ""
+                                                                                                }
+                       },
+        "Options":  {
+                        "com.docker.network.driver.overlay.vxlanid_list":  "4097",
+                        "com.docker.network.windowsshim.hnsid":  "10000000-0000-0000-0000-000000000000"
+                    },
+        "Labels":  {
+
+                   },
+        "Peers":  [
+                      {
+                          "Name":  "a2ebf129bf6a",
+                          "IP":  "192.168.100.100"
+                      }
+                  ]
+    }
+]

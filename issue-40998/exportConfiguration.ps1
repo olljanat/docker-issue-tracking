@@ -17,7 +17,7 @@ forEach($n in $DockerNetworks) {
     if ($containerPropertyNames.count -ne 2) {
         throw "Incorrect number of container properties found"
     }
-    $containerID = $containerPropertyNames | Where-Object {$_ -notlike "*-*"}
+    $global:containerID = $containerPropertyNames | Where-Object {$_ -notlike "*-*"}
     $lbName = $containerPropertyNames | Where-Object {$_ -ne $containerID}
     $n.Containers | Add-Member -Type NoteProperty -Name "0000000000000000000000000000000000000000000000000000000000000000" -Value $n.Containers.$containerID
     $n.Containers.PSObject.Properties.Remove($containerID)
@@ -79,7 +79,30 @@ $HnsNetworksJSON = $HnsNetworks | ConvertTo-Json -Depth 100
 [System.IO.File]::WriteAllLines("$PSScriptRoot\HnsNetworks.json", $HnsNetworksJSON, $Utf8NoBomEncoding)
 
 # Endpoints
-$HnsEndpointsJSON = Get-HnsEndpoint | Where-Object {$_.Type -eq "overlay"} | ConvertTo-Json -Depth 100
+$HnsEndpoints = Get-HnsEndpoint | Where-Object {$_.Type -eq "overlay"}
+if ($HnsEndpoints.count -ne 4) {
+    throw "Incorrect number of HNS endpoints found"
+}
+$HnsIngressEndpoints = $HnsEndpoints | Where-Object {$_.VirtualNetworkName -eq $IngressId}
+forEach($endpoint in $HnsIngressEndpoints) {
+    $endpoint.ActivityId = '00000000-0000-0000-0000-000000000001'
+    $endpoint.VirtualNetworkName = $IngressName
+    if ($endpoint.SharedContainers -eq $containerID) {
+        $endpoint.SharedContainers = @("0000000000000000000000000000000000000000000000000000000000000000")
+    }
+}
+
+$HnsAppNetEndpoints = $HnsEndpoints | Where-Object {$_.VirtualNetworkName -eq $AppNetId}
+forEach($endpoint in $HnsAppNetEndpoints) {
+    $endpoint.ActivityId = '00000000-0000-0000-0000-000000000002'
+    $endpoint.VirtualNetworkName = $AppNetName
+    if ($endpoint.SharedContainers -eq $containerID) {
+        $endpoint.SharedContainers = @("0000000000000000000000000000000000000000000000000000000000000000")
+    }
+}
+
+$HnsEndpointsSorted = $HnsEndpoints | Sort-Object ActivityId
+$HnsEndpointsJSON = $HnsEndpointsSorted | ConvertTo-Json -Depth 100
 [System.IO.File]::WriteAllLines("$PSScriptRoot\HnsEndpoints.json", $HnsEndpointsJSON, $Utf8NoBomEncoding)
 
 # Policies / Load Balancers
