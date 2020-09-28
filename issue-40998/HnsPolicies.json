@@ -1,41 +1,70 @@
 [
     {
-        "ActivityId":  "016502E1-C1DF-4B0F-AA43-3F1DA6165BD4",
+        "ActivityId":  "13CA54CD-C69C-4F9A-8D15-2A4EA591DF14",
         "AdditionalParams":  {
 
                              },
         "Flags":  1024,
         "Health":  {
                        "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983442974
+                       "LastUpdateTime":  132457900549021024
                    },
-        "ID":  "6D231A0C-C29C-43FA-AA49-FA5BD0EA291A",
+        "ID":  "953CF60C-54F4-4534-9B6F-62F902032DCA",
         "IsApplied":  false,
         "Policies":  [
                          {
                              "ExternalPort":  0,
                              "ILB":  true,
                              "InternalPort":  0,
-                             "SourceVIP":  "10.0.1.4",
+                             "SourceVIP":  "10.0.0.2",
                              "Type":  "ELB",
                              "VIPs":  [
-                                          "10.0.1.2"
+                                          "10.0.0.3"
                                       ]
                          }
                      ],
         "References":  [
-                           "INVALID ENDPOINT ID"
+                           "00000000-0000-0000-0000-100000000000"
                        ],
         "Resources":  {
                           "AdditionalParams":  {
 
                                                },
-                          "AllocationOrder":  0,
+                          "AllocationOrder":  1,
+                          "Allocators":  [
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  0,
+                                                 "DestinationVIPMappingRef":  2,
+                                                 "ExternalPort":  0,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132457900549081028
+                                                            },
+                                                 "ID":  "1D5A37D9-2B5A-492C-BA12-47B6C6E385AD",
+                                                 "ILB":  true,
+                                                 "InternalPort":  0,
+                                                 "IsDSR":  false,
+                                                 "IsPolicy":  true,
+                                                 "LocalRoutedVip":  false,
+                                                 "NatPool":  "SLB_NATPOOL_IPV4_UDP_0",
+                                                 "Protocol":  0,
+                                                 "SourceVIPMappingRe":  2,
+                                                 "SourceVip":  "10.0.0.2",
+                                                 "State":  3,
+                                                 "TCPPortAllocate":  true,
+                                                 "Tag":  "VFP ELB Policy Non Dsr",
+                                                 "UDPPortAllocate":  true,
+                                                 "VIP_0":  "10.0.0.3"
+                                             }
+                                         ],
                           "Health":  {
                                          "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983442974
+                                         "LastUpdateTime":  132457900549021024
                                      },
-                          "ID":  "016502E1-C1DF-4B0F-AA43-3F1DA6165BD4",
+                          "ID":  "13CA54CD-C69C-4F9A-8D15-2A4EA591DF14",
                           "PortOperationTime":  0,
                           "State":  1,
                           "SwitchOperationTime":  0,
@@ -45,15 +74,90 @@
         "Version":  38654705667
     },
     {
-        "ActivityId":  "C5879902-6487-41B6-B4E6-B07168C4F5EA",
+        "ActivityId":  "EAC25CCA-E6E4-498A-80C4-7ABD2C2D84BE",
         "AdditionalParams":  {
 
                              },
+        "Flags":  1024,
         "Health":  {
                        "LastErrorCode":  0,
-                       "LastUpdateTime":  132457896315294092
+                       "LastUpdateTime":  132457900549948772
                    },
-        "ID":  "E0B315D3-A08F-4C2D-8A81-B6FCC85986C1",
+        "ID":  "3FA93CF0-A27A-48C4-8FB1-2B8AB96EE130",
+        "IsApplied":  false,
+        "Policies":  [
+                         {
+                             "ExternalPort":  0,
+                             "ILB":  true,
+                             "InternalPort":  0,
+                             "SourceVIP":  "10.0.1.5",
+                             "Type":  "ELB",
+                             "VIPs":  [
+                                          "10.0.1.2"
+                                      ]
+                         }
+                     ],
+        "References":  [
+                           "00000000-0000-0000-0000-300000000000"
+                       ],
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  1,
+                          "Allocators":  [
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  0,
+                                                 "DestinationVIPMappingRef":  2,
+                                                 "ExternalPort":  0,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132457900549998763
+                                                            },
+                                                 "ID":  "A23D3C10-045B-4F90-ADA3-491BBCDB6692",
+                                                 "ILB":  true,
+                                                 "InternalPort":  0,
+                                                 "IsDSR":  false,
+                                                 "IsPolicy":  true,
+                                                 "LocalRoutedVip":  false,
+                                                 "NatPool":  "SLB_NATPOOL_IPV4_UDP_0",
+                                                 "Protocol":  0,
+                                                 "SourceVIPMappingRe":  2,
+                                                 "SourceVip":  "10.0.1.5",
+                                                 "State":  3,
+                                                 "TCPPortAllocate":  true,
+                                                 "Tag":  "VFP ELB Policy Non Dsr",
+                                                 "UDPPortAllocate":  true,
+                                                 "VIP_0":  "10.0.1.2"
+                                             }
+                                         ],
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132457900549948772
+                                     },
+                          "ID":  "EAC25CCA-E6E4-498A-80C4-7ABD2C2D84BE",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0
+                      },
+        "State":  2,
+        "Version":  38654705667
+    },
+    {
+        "ActivityId":  "FE224E85-7377-49E6-8317-9D0E4E753863",
+        "AdditionalParams":  {
+
+                             },
+        "Flags":  1024,
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132457900549201030
+                   },
+        "ID":  "153BBB40-C1DA-44DC-977F-FFFF721D9CA6",
         "IsApplied":  false,
         "Policies":  [
                          {
@@ -82,391 +186,29 @@
                                                  "ExternalPort":  8080,
                                                  "Health":  {
                                                                 "LastErrorCode":  0,
-                                                                "LastUpdateTime":  132457896315364081
+                                                                "LastUpdateTime":  132457900549272557
                                                             },
-                                                 "ID":  "B2B3EF6D-3FB3-4BA3-843E-60CBC9D57DED",
+                                                 "ID":  "27D8636C-B6D8-4FB1-AF53-D7E7749302E3",
                                                  "ILB":  false,
                                                  "InternalPort":  80,
                                                  "IsDSR":  false,
                                                  "IsPolicy":  true,
                                                  "LocalRoutedVip":  false,
+                                                 "NatPool":  "SLB_NATPOOL_IPV4_TCP_0",
                                                  "Protocol":  6,
                                                  "SourceVIPMappingRe":  1,
                                                  "SourceVip":  "10.0.0.2",
                                                  "State":  3,
                                                  "TCPPortAllocate":  true,
-                                                 "Tag":  "VFP ELB Policy",
+                                                 "Tag":  "VFP ELB Policy Non Dsr",
                                                  "UDPPortAllocate":  false
                                              }
                                          ],
                           "Health":  {
                                          "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457896315294092
+                                         "LastUpdateTime":  132457900549201030
                                      },
-                          "ID":  "C5879902-6487-41B6-B4E6-B07168C4F5EA",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "3CD57197-6A63-436D-9781-2DDFC7028EF1",
-        "AdditionalParams":  {
-
-                             },
-        "Flags":  1024,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983452987
-                   },
-        "ID":  "595DFEE5-D38D-45C2-B1E4-5D678E119DEF",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  8080,
-                             "InternalPort":  80,
-                             "Protocol":  6,
-                             "SourceVIP":  "10.0.0.2",
-                             "Type":  "ELB"
-                         }
-                     ],
-        "References":  [
-                           "INVALID ENDPOINT ID"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983452987
-                                     },
-                          "ID":  "3CD57197-6A63-436D-9781-2DDFC7028EF1",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "578D553F-B579-42B2-B04A-A58486B68C11",
-        "AdditionalParams":  {
-
-                             },
-        "Flags":  1024,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983463047
-                   },
-        "ID":  "F4D4D1BC-187A-42F8-A80F-A145A6F7D680",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  0,
-                             "ILB":  true,
-                             "InternalPort":  0,
-                             "SourceVIP":  "10.0.0.2",
-                             "Type":  "ELB",
-                             "VIPs":  [
-                                          "10.0.0.3"
-                                      ]
-                         }
-                     ],
-        "References":  [
-                           "INVALID ENDPOINT ID"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983463047
-                                     },
-                          "ID":  "578D553F-B579-42B2-B04A-A58486B68C11",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "506EF376-37C4-457E-A80E-9AFAE8799B40",
-        "AdditionalParams":  {
-
-                             },
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457896318219027
-                   },
-        "ID":  "D0D8FB94-EEF9-4199-81A2-7BE1F901D17B",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  0,
-                             "ILB":  true,
-                             "InternalPort":  0,
-                             "SourceVIP":  "10.0.1.4",
-                             "Type":  "ELB",
-                             "VIPs":  [
-                                          "10.0.1.2"
-                                      ]
-                         }
-                     ],
-        "References":  [
-                           "00000000-0000-0000-0000-300000000000"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  1,
-                          "Allocators":  [
-                                             {
-                                                 "AdditionalParams":  {
-
-                                                                      },
-                                                 "AllocationOrder":  0,
-                                                 "DestinationVIPMappingRef":  2,
-                                                 "ExternalPort":  0,
-                                                 "Health":  {
-                                                                "LastErrorCode":  0,
-                                                                "LastUpdateTime":  132457896318269016
-                                                            },
-                                                 "ID":  "6A348AA6-6039-4BE9-903F-CA914F08995A",
-                                                 "ILB":  true,
-                                                 "InternalPort":  0,
-                                                 "IsDSR":  false,
-                                                 "IsPolicy":  true,
-                                                 "LocalRoutedVip":  false,
-                                                 "Protocol":  0,
-                                                 "SourceVIPMappingRe":  2,
-                                                 "SourceVip":  "10.0.1.4",
-                                                 "State":  3,
-                                                 "TCPPortAllocate":  true,
-                                                 "Tag":  "VFP ELB Policy",
-                                                 "UDPPortAllocate":  true,
-                                                 "VIP_0":  "10.0.1.2"
-                                             }
-                                         ],
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457896318219027
-                                     },
-                          "ID":  "506EF376-37C4-457E-A80E-9AFAE8799B40",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "33CEA6DE-7518-4C22-9C19-BCA2F4AD6E9C",
-        "AdditionalParams":  {
-
-                             },
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457896312587982
-                   },
-        "ID":  "003D0BCA-E2FB-467D-A4CF-7CF38D4D4431",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  0,
-                             "ILB":  true,
-                             "InternalPort":  0,
-                             "SourceVIP":  "10.0.0.2",
-                             "Type":  "ELB",
-                             "VIPs":  [
-                                          "10.0.0.3"
-                                      ]
-                         }
-                     ],
-        "References":  [
-                           "00000000-0000-0000-0000-100000000000"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  1,
-                          "Allocators":  [
-                                             {
-                                                 "AdditionalParams":  {
-
-                                                                      },
-                                                 "AllocationOrder":  0,
-                                                 "DestinationVIPMappingRef":  2,
-                                                 "ExternalPort":  0,
-                                                 "Health":  {
-                                                                "LastErrorCode":  0,
-                                                                "LastUpdateTime":  132457896312744297
-                                                            },
-                                                 "ID":  "36089389-23A2-4A59-A5A9-AD7D1FEE744D",
-                                                 "ILB":  true,
-                                                 "InternalPort":  0,
-                                                 "IsDSR":  false,
-                                                 "IsPolicy":  true,
-                                                 "LocalRoutedVip":  false,
-                                                 "Protocol":  0,
-                                                 "SourceVIPMappingRe":  2,
-                                                 "SourceVip":  "10.0.0.2",
-                                                 "State":  3,
-                                                 "TCPPortAllocate":  true,
-                                                 "Tag":  "VFP ELB Policy",
-                                                 "UDPPortAllocate":  true,
-                                                 "VIP_0":  "10.0.0.3"
-                                             }
-                                         ],
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457896312587982
-                                     },
-                          "ID":  "33CEA6DE-7518-4C22-9C19-BCA2F4AD6E9C",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "CC7841DD-8DD2-4501-8FAC-68AD470491EE",
-        "AdditionalParams":  {
-
-                             },
-        "Flags":  1024,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983452987
-                   },
-        "ID":  "45ED0950-7948-4442-A332-0CF7071649BF",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  0,
-                             "ILB":  true,
-                             "InternalPort":  0,
-                             "SourceVIP":  "10.0.0.2",
-                             "Type":  "ELB",
-                             "VIPs":  [
-                                          "10.0.0.3"
-                                      ]
-                         }
-                     ],
-        "References":  [
-                           "INVALID ENDPOINT ID"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983452987
-                                     },
-                          "ID":  "CC7841DD-8DD2-4501-8FAC-68AD470491EE",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "F44804F8-54CA-4E51-8D5A-60E969430593",
-        "AdditionalParams":  {
-
-                             },
-        "Flags":  1024,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983452987
-                   },
-        "ID":  "72932ED1-C7D7-48A8-8301-D39829545C6B",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  0,
-                             "ILB":  true,
-                             "InternalPort":  0,
-                             "SourceVIP":  "10.0.1.4",
-                             "Type":  "ELB",
-                             "VIPs":  [
-                                          "10.0.1.2"
-                                      ]
-                         }
-                     ],
-        "References":  [
-                           "INVALID ENDPOINT ID"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983452987
-                                     },
-                          "ID":  "F44804F8-54CA-4E51-8D5A-60E969430593",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0
-                      },
-        "State":  2,
-        "Version":  38654705667
-    },
-    {
-        "ActivityId":  "E23D3A7C-00BC-4271-86CD-6D132801B061",
-        "AdditionalParams":  {
-
-                             },
-        "Flags":  1024,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457895983463047
-                   },
-        "ID":  "8EFC3251-8477-4D39-B6ED-70F5435DBA19",
-        "IsApplied":  false,
-        "Policies":  [
-                         {
-                             "ExternalPort":  8080,
-                             "InternalPort":  80,
-                             "Protocol":  6,
-                             "SourceVIP":  "10.0.0.2",
-                             "Type":  "ELB"
-                         }
-                     ],
-        "References":  [
-                           "INVALID ENDPOINT ID"
-                       ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457895983463047
-                                     },
-                          "ID":  "E23D3A7C-00BC-4271-86CD-6D132801B061",
+                          "ID":  "FE224E85-7377-49E6-8317-9D0E4E753863",
                           "PortOperationTime":  0,
                           "State":  1,
                           "SwitchOperationTime":  0,
