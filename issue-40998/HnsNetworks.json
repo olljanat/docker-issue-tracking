@@ -1,114 +1,5 @@
 [
     {
-        "ActivityId":  "00000000-0000-0000-0000-000000000002",
-        "AdditionalParams":  {
-
-                             },
-        "AutomaticDNS":  true,
-        "CurrentEndpointCount":  1,
-        "DNSServerCompartment":  6,
-        "DrMacAddress":  "00-15-5D-6C-30-B5",
-        "Extensions":  [
-                           {
-                               "Id":  "E7C3B2F0-F3C5-48DF-AF2B-10FED6D72E7A",
-                               "IsEnabled":  false,
-                               "Name":  "Microsoft Windows Filtering Platform"
-                           },
-                           {
-                               "Id":  "E9B59CFA-2BE1-4B21-828F-B6FBDBDDC017",
-                               "IsEnabled":  true,
-                               "Name":  "Microsoft Azure VFP Switch Extension"
-                           },
-                           {
-                               "Id":  "EA24CD6C-D17A-4348-9190-09F0D5BE83DD",
-                               "IsEnabled":  true,
-                               "Name":  "Microsoft NDIS Capture"
-                           }
-                       ],
-        "Flags":  0,
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  132457906294314430
-                   },
-        "ID":  "10000000-0000-0000-0000-000000000000",
-        "IPv6":  false,
-        "LayeredOn":  "97AF6DFA-31D2-496C-96FF-F159548CC942",
-        "MacPools":  [
-                         {
-                             "EndMacAddress":  "00-15-5D-84-BF-FF",
-                             "StartMacAddress":  "00-15-5D-84-B0-00"
-                         }
-                     ],
-        "ManagementIP":  "10.152.188.100",
-        "MaxConcurrentEndpoints":  1,
-        "Name":  "juliett",
-        "Policies":  [
-
-                     ],
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  1,
-                          "Allocators":  [
-                                             {
-                                                 "AdditionalParams":  {
-
-                                                                      },
-                                                 "AllocationOrder":  0,
-                                                 "Health":  {
-                                                                "LastErrorCode":  0,
-                                                                "LastUpdateTime":  132457906295515327
-                                                            },
-                                                 "ID":  "CCE3B31B-3CC3-44BF-BBA4-381794F87DE0",
-                                                 "IsPolicy":  false,
-                                                 "Isolation_0":  4097,
-                                                 "PortId":  "9A8BDD1E-B6C2-4547-89EA-7ACD2C11DA29",
-                                                 "RDID":  "B7160092-E925-4CA9-9503-3F99DE8DB93B",
-                                                 "State":  3,
-                                                 "SwitchId":  "69D8001E-FCA1-493C-9360-A94E85AAB170",
-                                                 "Tag":  "RDID"
-                                             }
-                                         ],
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457906295515327
-                                     },
-                          "ID":  "15F4EFD6-374D-4AD6-B189-EFB4F3F15954",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0,
-                          "parentId":  "A76E31EA-9525-49AB-8445-8D54DC6CD4ED"
-                      },
-        "State":  1,
-        "Subnets":  [
-                        {
-                            "AdditionalParams":  {
-
-                                                 },
-                            "AddressPrefix":  "10.0.1.0/24",
-                            "GatewayAddress":  "10.0.1.1",
-                            "Health":  {
-                                           "LastErrorCode":  0,
-                                           "LastUpdateTime":  132457906294314430
-                                       },
-                            "ID":  "A46B921E-A5D2-4491-AF12-4101EA673A2D",
-                            "ObjectType":  5,
-                            "Policies":  [
-                                             {
-                                                 "Type":  "VSID",
-                                                 "VSID":  4097
-                                             }
-                                         ],
-                            "State":  0
-                        }
-                    ],
-        "TotalEndpoints":  1,
-        "Type":  "overlay",
-        "Version":  38654705667
-    },
-    {
         "ActivityId":  "00000000-0000-0000-0000-000000000001",
         "AdditionalParams":  {
 
@@ -137,15 +28,15 @@
         "Flags":  0,
         "Health":  {
                        "LastErrorCode":  0,
-                       "LastUpdateTime":  132457906241377100
+                       "LastUpdateTime":  132457907769964288
                    },
         "ID":  "00000000-0000-0000-0000-000000000000",
         "IPv6":  false,
         "LayeredOn":  "97AF6DFA-31D2-496C-96FF-F159548CC942",
         "MacPools":  [
                          {
-                             "EndMacAddress":  "00-15-5D-0F-BF-FF",
-                             "StartMacAddress":  "00-15-5D-0F-B0-00"
+                             "EndMacAddress":  "00-15-5D-E2-4F-FF",
+                             "StartMacAddress":  "00-15-5D-E2-40-00"
                          }
                      ],
         "ManagementIP":  "10.152.188.100",
@@ -167,13 +58,13 @@
                                                  "AllocationOrder":  0,
                                                  "Health":  {
                                                                 "LastErrorCode":  0,
-                                                                "LastUpdateTime":  132457906241797143
+                                                                "LastUpdateTime":  132457907770394395
                                                             },
-                                                 "ID":  "ED102509-0969-4017-8192-6B4BED1CCBF9",
+                                                 "ID":  "7B6418C7-73F7-4C10-83E2-836AC6AE2BCF",
                                                  "IsPolicy":  false,
                                                  "Isolation_0":  4096,
                                                  "PortId":  "9A8BDD1E-B6C2-4547-89EA-7ACD2C11DA29",
-                                                 "RDID":  "FB9F81B2-B8D9-40DF-A030-47BF39404B52",
+                                                 "RDID":  "C1514D39-D95A-492A-A82B-CB18A44A8599",
                                                  "State":  3,
                                                  "SwitchId":  "69D8001E-FCA1-493C-9360-A94E85AAB170",
                                                  "Tag":  "RDID"
@@ -181,9 +72,9 @@
                                          ],
                           "Health":  {
                                          "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457906241787194
+                                         "LastUpdateTime":  132457907770384320
                                      },
-                          "ID":  "DF92F54A-2139-4180-B75B-350B71690836",
+                          "ID":  "9C3785FA-D195-4C66-AE59-E016DE121783",
                           "PortOperationTime":  0,
                           "State":  1,
                           "SwitchOperationTime":  0,
@@ -200,14 +91,123 @@
                             "GatewayAddress":  "10.0.0.1",
                             "Health":  {
                                            "LastErrorCode":  0,
-                                           "LastUpdateTime":  132457906241377100
+                                           "LastUpdateTime":  132457907769964288
                                        },
-                            "ID":  "B272EEE7-F426-4542-A13D-03C2D69778E9",
+                            "ID":  "5572CFC0-EE62-403A-AEFC-E8641DA05B05",
                             "ObjectType":  5,
                             "Policies":  [
                                              {
                                                  "Type":  "VSID",
                                                  "VSID":  4096
+                                             }
+                                         ],
+                            "State":  0
+                        }
+                    ],
+        "TotalEndpoints":  1,
+        "Type":  "overlay",
+        "Version":  38654705667
+    },
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000002",
+        "AdditionalParams":  {
+
+                             },
+        "AutomaticDNS":  true,
+        "CurrentEndpointCount":  1,
+        "DNSServerCompartment":  6,
+        "DrMacAddress":  "00-15-5D-6C-30-B5",
+        "Extensions":  [
+                           {
+                               "Id":  "E7C3B2F0-F3C5-48DF-AF2B-10FED6D72E7A",
+                               "IsEnabled":  false,
+                               "Name":  "Microsoft Windows Filtering Platform"
+                           },
+                           {
+                               "Id":  "E9B59CFA-2BE1-4B21-828F-B6FBDBDDC017",
+                               "IsEnabled":  true,
+                               "Name":  "Microsoft Azure VFP Switch Extension"
+                           },
+                           {
+                               "Id":  "EA24CD6C-D17A-4348-9190-09F0D5BE83DD",
+                               "IsEnabled":  true,
+                               "Name":  "Microsoft NDIS Capture"
+                           }
+                       ],
+        "Flags":  0,
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  132457907822852755
+                   },
+        "ID":  "10000000-0000-0000-0000-000000000000",
+        "IPv6":  false,
+        "LayeredOn":  "97AF6DFA-31D2-496C-96FF-F159548CC942",
+        "MacPools":  [
+                         {
+                             "EndMacAddress":  "00-15-5D-C8-6F-FF",
+                             "StartMacAddress":  "00-15-5D-C8-60-00"
+                         }
+                     ],
+        "ManagementIP":  "10.152.188.100",
+        "MaxConcurrentEndpoints":  1,
+        "Name":  "juliett",
+        "Policies":  [
+
+                     ],
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  1,
+                          "Allocators":  [
+                                             {
+                                                 "AdditionalParams":  {
+
+                                                                      },
+                                                 "AllocationOrder":  0,
+                                                 "Health":  {
+                                                                "LastErrorCode":  0,
+                                                                "LastUpdateTime":  132457907823832809
+                                                            },
+                                                 "ID":  "D1AD157B-CB28-43F9-94A9-8CE45B949CB7",
+                                                 "IsPolicy":  false,
+                                                 "Isolation_0":  4097,
+                                                 "PortId":  "9A8BDD1E-B6C2-4547-89EA-7ACD2C11DA29",
+                                                 "RDID":  "8C749FEA-5741-4D24-9CB5-5D66C73A124C",
+                                                 "State":  3,
+                                                 "SwitchId":  "69D8001E-FCA1-493C-9360-A94E85AAB170",
+                                                 "Tag":  "RDID"
+                                             }
+                                         ],
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132457907823832809
+                                     },
+                          "ID":  "2BB55181-2E0A-4B22-8771-95B4C5BCE151",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "A76E31EA-9525-49AB-8445-8D54DC6CD4ED"
+                      },
+        "State":  1,
+        "Subnets":  [
+                        {
+                            "AdditionalParams":  {
+
+                                                 },
+                            "AddressPrefix":  "10.0.1.0/24",
+                            "GatewayAddress":  "10.0.1.1",
+                            "Health":  {
+                                           "LastErrorCode":  0,
+                                           "LastUpdateTime":  132457907822852755
+                                       },
+                            "ID":  "2E70C0FD-F327-44ED-96A8-AABEE37F08A0",
+                            "ObjectType":  5,
+                            "Policies":  [
+                                             {
+                                                 "Type":  "VSID",
+                                                 "VSID":  4097
                                              }
                                          ],
                             "State":  0
