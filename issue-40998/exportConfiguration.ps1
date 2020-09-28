@@ -125,9 +125,9 @@ forEach($endpoint in $HnsAppNetEndpoints) {
     $endpoint.Health.LastUpdateTime = "000000000000000000"
 }
 
-# $HnsEndpointsSorted = $HnsEndpoints | Sort-Object ActivityId
-# $HnsEndpointsJSON = $HnsEndpointsSorted | ConvertTo-Json -Depth 100
-$HnsEndpointsJSON = $HnsEndpoints | ConvertTo-Json -Depth 100
+$HnsEndpointsSorted = $HnsEndpoints | Sort-Object ActivityId
+$HnsEndpointsJSON = $HnsEndpointsSorted | ConvertTo-Json -Depth 100
+# $HnsEndpointsJSON = $HnsEndpoints | ConvertTo-Json -Depth 100
 [System.IO.File]::WriteAllLines("$PSScriptRoot\HnsEndpoints.json", $HnsEndpointsJSON, $Utf8NoBomEncoding)
 
 # Policies / Load Balancers
@@ -140,7 +140,7 @@ forEach($policy in $HnsPolicies) {
     }
     $policy.References = @($newEndpoint)
 }
-# $HnsPoliciesSorted = $HnsPolicies | Sort-Object References
-# $HnsPoliciesJSON = $HnsPoliciesSorted | ConvertTo-Json -Depth 100
-$HnsPoliciesJSON = $HnsPolicies | ConvertTo-Json -Depth 100
+$HnsPoliciesSorted = $HnsPolicies | Sort-Object References
+$HnsPoliciesJSON = $HnsPoliciesSorted | ConvertTo-Json -Depth 100
+# $HnsPoliciesJSON = $HnsPolicies | ConvertTo-Json -Depth 100
 [System.IO.File]::WriteAllLines("$PSScriptRoot\HnsPolicies.json", $HnsPoliciesJSON, $Utf8NoBomEncoding)
