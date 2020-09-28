@@ -89,14 +89,15 @@ if ($HnsEndpoints.count -ne 4) {
 $endpointMapping = @{}
 $HnsIngressEndpoints = $HnsEndpoints | Where-Object {$_.VirtualNetworkName -eq $IngressId}
 forEach($endpoint in $HnsIngressEndpoints) {
-    $endpoint.ActivityId = '00000000-0000-0000-0000-000000000001'
     $endpoint.VirtualNetworkName = $IngressName
     $endpoint.Name = $IngressName
     if ($endpoint.SharedContainers -eq $containerID) {
+        $endpoint.ActivityId = '00000000-0000-0000-0000-000000000001'
         $endpoint.SharedContainers = @("0000000000000000000000000000000000000000000000000000000000000000")
         $endpointMapping[$endpoint.ID] = "00000000-0000-0000-0000-100000000000"
         $endpoint.ID = "00000000-0000-0000-0000-100000000000"
     } else {
+        $endpoint.ActivityId = '00000000-0000-0000-0000-000000000002'
         $endpointMapping[$endpoint.ID] = "00000000-0000-0000-0000-200000000000"
         $endpoint.ID = "00000000-0000-0000-0000-200000000000"
     }
@@ -107,14 +108,15 @@ forEach($endpoint in $HnsIngressEndpoints) {
 
 $HnsAppNetEndpoints = $HnsEndpoints | Where-Object {$_.VirtualNetworkName -eq $AppNetId}
 forEach($endpoint in $HnsAppNetEndpoints) {
-    $endpoint.ActivityId = '00000000-0000-0000-0000-000000000002'
     $endpoint.VirtualNetworkName = $AppNetName
     $endpoint.Name = $AppNetName
     if ($endpoint.SharedContainers -eq $containerID) {
+        $endpoint.ActivityId = '00000000-0000-0000-0000-000000000003'
         $endpoint.SharedContainers = @("0000000000000000000000000000000000000000000000000000000000000000")
         $endpointMapping[$endpoint.ID] = "00000000-0000-0000-0000-300000000000"
         $endpoint.ID = "00000000-0000-0000-0000-300000000000"
     } else {
+        $endpoint.ActivityId = '00000000-0000-0000-0000-000000000004'
         $endpointMapping[$endpoint.ID] = "00000000-0000-0000-0000-400000000000"
         $endpoint.ID = "00000000-0000-0000-0000-400000000000"
     }

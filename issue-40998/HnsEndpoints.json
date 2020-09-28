@@ -13,60 +13,6 @@
                        "LastErrorCode":  0,
                        "LastUpdateTime":  "000000000000000000"
                    },
-        "ID":  "00000000-0000-0000-0000-200000000000",
-        "IPAddress":  "10.0.0.2",
-        "MacAddress":  "00-15-5D-2D-8F-CC",
-        "Name":  "ingress",
-        "Policies":  [
-                         {
-                             "PA":  "192.168.100.100",
-                             "Type":  "PA"
-                         },
-                         {
-                             "PA":  "",
-                             "Type":  "OutBoundNAT"
-                         }
-                     ],
-        "PrefixLength":  24,
-        "Resources":  {
-                          "AdditionalParams":  {
-
-                                               },
-                          "AllocationOrder":  0,
-                          "Health":  {
-                                         "LastErrorCode":  0,
-                                         "LastUpdateTime":  132457858053772274
-                                     },
-                          "ID":  "2CF04181-679E-4D7E-BA6E-ECCF4F71F96A",
-                          "PortOperationTime":  0,
-                          "State":  1,
-                          "SwitchOperationTime":  0,
-                          "VfpOperationTime":  0,
-                          "parentId":  "EFE76105-D740-45F0-9442-585D40678756"
-                      },
-        "SharedContainers":  [
-
-                             ],
-        "State":  1,
-        "Type":  "overlay",
-        "Version":  38654705667,
-        "VirtualNetwork":  "6AF66771-7AF2-4061-BE40-4CC80FF1425B",
-        "VirtualNetworkName":  "ingress"
-    },
-    {
-        "ActivityId":  "00000000-0000-0000-0000-000000000001",
-        "AdditionalParams":  {
-
-                             },
-        "CreateProcessingStartTime":  "000000000000000000",
-        "DNSServerList":  "10.0.1.1,192.168.100.1",
-        "EnableInternalDNS":  true,
-        "EncapOverhead":  50,
-        "GatewayAddress":  "10.0.0.1",
-        "Health":  {
-                       "LastErrorCode":  0,
-                       "LastUpdateTime":  "000000000000000000"
-                   },
         "ID":  "00000000-0000-0000-0000-100000000000",
         "IPAddress":  "10.0.0.4",
         "MacAddress":  "00-15-5D-2D-8E-B9",
@@ -222,6 +168,60 @@
     },
     {
         "ActivityId":  "00000000-0000-0000-0000-000000000002",
+        "AdditionalParams":  {
+
+                             },
+        "CreateProcessingStartTime":  "000000000000000000",
+        "DNSServerList":  "10.0.1.1,192.168.100.1",
+        "EnableInternalDNS":  true,
+        "EncapOverhead":  50,
+        "GatewayAddress":  "10.0.0.1",
+        "Health":  {
+                       "LastErrorCode":  0,
+                       "LastUpdateTime":  "000000000000000000"
+                   },
+        "ID":  "00000000-0000-0000-0000-200000000000",
+        "IPAddress":  "10.0.0.2",
+        "MacAddress":  "00-15-5D-2D-8F-CC",
+        "Name":  "ingress",
+        "Policies":  [
+                         {
+                             "PA":  "192.168.100.100",
+                             "Type":  "PA"
+                         },
+                         {
+                             "PA":  "",
+                             "Type":  "OutBoundNAT"
+                         }
+                     ],
+        "PrefixLength":  24,
+        "Resources":  {
+                          "AdditionalParams":  {
+
+                                               },
+                          "AllocationOrder":  0,
+                          "Health":  {
+                                         "LastErrorCode":  0,
+                                         "LastUpdateTime":  132457858053772274
+                                     },
+                          "ID":  "2CF04181-679E-4D7E-BA6E-ECCF4F71F96A",
+                          "PortOperationTime":  0,
+                          "State":  1,
+                          "SwitchOperationTime":  0,
+                          "VfpOperationTime":  0,
+                          "parentId":  "EFE76105-D740-45F0-9442-585D40678756"
+                      },
+        "SharedContainers":  [
+
+                             ],
+        "State":  1,
+        "Type":  "overlay",
+        "Version":  38654705667,
+        "VirtualNetwork":  "6AF66771-7AF2-4061-BE40-4CC80FF1425B",
+        "VirtualNetworkName":  "ingress"
+    },
+    {
+        "ActivityId":  "00000000-0000-0000-0000-000000000003",
         "AdditionalParams":  {
 
                              },
@@ -388,7 +388,7 @@
         "VirtualNetworkName":  "juliett"
     },
     {
-        "ActivityId":  "00000000-0000-0000-0000-000000000002",
+        "ActivityId":  "00000000-0000-0000-0000-000000000004",
         "AdditionalParams":  {
 
                              },
